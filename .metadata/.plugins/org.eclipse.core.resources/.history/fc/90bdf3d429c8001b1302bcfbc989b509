@@ -1,0 +1,5 @@
+package com.fun;
+
+public interface CallBack {
+   public void process(String n);
+}

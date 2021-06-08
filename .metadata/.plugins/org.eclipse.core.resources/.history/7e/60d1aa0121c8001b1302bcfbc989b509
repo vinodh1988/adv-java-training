@@ -1,0 +1,18 @@
+package com.first;
+
+public class OnlyOne {
+   private  String connect=null;
+   private static  OnlyOne connection; 
+   
+   static {
+	   String connect=Resource.getConnection();
+	   connection=new OnlyOne();
+	   connection.connect=connect;
+   }
+   
+ 
+   public static void getOnlyOne() {
+	   return connection;
+   }
+  
+}
