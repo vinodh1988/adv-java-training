@@ -1,0 +1,12 @@
+package com.design.factory;
+
+import com.design.BackgroundThread;
+import com.design.BackupTask;
+import com.design.TaskGroup;
+
+public class JobFactory {
+   private static final TaskGroup backup=new BackupTask();
+   private static final TaskGroup background=new BackgroundThread();
+   private static final TaskGroup backup=new BackupTask();
+   private static final TaskGroup backup=new BackupTask();
+}

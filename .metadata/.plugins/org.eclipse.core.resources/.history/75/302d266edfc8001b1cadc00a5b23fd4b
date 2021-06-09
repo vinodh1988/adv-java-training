@@ -1,0 +1,21 @@
+package com.design.factory;
+
+import com.design.BackgroundThread;
+import com.design.BackupTask;
+import com.design.BuildTask;
+import com.design.ScheduledTask;
+import com.design.TaskGroup;
+
+public class JobFactory {
+   private static final TaskGroup backup=new BackupTask();
+   private static final TaskGroup background=new BackgroundThread();
+   private static final TaskGroup scheduled=new ScheduledTask();
+   private static final TaskGroup build=new BuildTask();
+   
+   private JobFactory() {}
+   
+   public static TaskGroup getObject(String type) {
+	   switch()
+   }
+   
+}

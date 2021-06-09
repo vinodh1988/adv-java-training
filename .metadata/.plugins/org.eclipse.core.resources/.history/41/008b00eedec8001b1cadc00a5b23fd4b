@@ -1,0 +1,7 @@
+package com.design.factory;
+
+import com.design.TaskGroup;
+
+public class JobFactory {
+   private static final TaskGroup backup=new BackupTask();
+}
