@@ -7,6 +7,5 @@ public class Task {
 	   System.out.println("Part3");
 	   b.process("Part3");
 	   System.out.println("Finished");
-	   b.adhoc();
    }
 }

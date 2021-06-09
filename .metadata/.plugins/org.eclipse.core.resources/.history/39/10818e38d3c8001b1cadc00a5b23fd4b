@@ -1,0 +1,11 @@
+package com.fun;
+
+public interface CallBack {
+   public void process(String n);
+   public void funny();
+   default void adhoc() {
+	   System.out.println("Adhoc method");
+   }
+}
+
+//functional interface -- interfaces with only one method 

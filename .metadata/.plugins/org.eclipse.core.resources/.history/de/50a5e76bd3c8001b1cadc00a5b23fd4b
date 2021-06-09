@@ -8,7 +8,7 @@ public interface CallBack {
    }
    
    static void adhoc2() {
-	   System.out.println("Static method");
+	   
    }
 }
 

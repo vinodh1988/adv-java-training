@@ -19,7 +19,5 @@ public class MainClass {
 	   Task.taskExecution((data)->{
 		   System.out.println("Processing "+data);
 	   });
-	   
-	   CallBack.adhoc2();
    }
 }

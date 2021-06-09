@@ -9,17 +9,15 @@ public class MainClass {
 	   }
 	   Task.taskExecution(new Temp());*/
 	   
-	 /*  Task.taskExecution(new CallBack() {
+	   Task.taskExecution(new CallBack() {
 		   public void process(String data) {
 			   System.out.println("Processing "+data);
 		   }
 		   public void funny() {}
 	   });
-	   */
+	   
 	   Task.taskExecution((data)->{
 		   System.out.println("Processing "+data);
 	   });
-	   
-	   CallBack.adhoc2();
    }
 }

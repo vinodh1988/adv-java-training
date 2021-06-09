@@ -7,9 +7,9 @@ public interface CallBack {
 	   System.out.println("Adhoc method");
    }
    
-   static void adhoc2() {
-	   System.out.println("Static method");
+   default void adhoc2() {
+	   
    }
 }
 
-//functional interface -- interfaces with only one abstract method [it can have default methods]
+//functional interface -- interfaces with only one method 
