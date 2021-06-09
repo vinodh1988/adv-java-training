@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.design.TaskGroup;
 import com.design.pattern.JobFactory;
+
 import com.design.pattern.TaskFacade;
 
 public class TaskMain {
@@ -22,6 +23,7 @@ public class TaskMain {
          TaskGroup tg=JobFactory.getObject(choice);
          System.out.print("Value for "+choice);
          String data = sc.next();
+       
          TaskFacade.performActivity(tg::job,data );
 	}
 
