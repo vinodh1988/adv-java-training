@@ -1,0 +1,13 @@
+package com.methods;
+
+public class MainProg {
+   public static void main(String[] args) {
+	    Process.doTask(
+	   (activity)->{
+	    	System.out.println("Doing "+activity);
+	         }, 
+	   "Programming");
+	    
+	    Process.doTask(General::printing,"Ebook");
+    }
+}
