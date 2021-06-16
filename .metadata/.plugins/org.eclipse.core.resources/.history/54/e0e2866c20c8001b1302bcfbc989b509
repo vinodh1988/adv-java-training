@@ -1,9 +1,0 @@
-package com.first;
-
-public class OnlyOne {
-   private final static String connect=null;
-   
-   static {
-	   connect=Resource.getConnection();
-   }
-}

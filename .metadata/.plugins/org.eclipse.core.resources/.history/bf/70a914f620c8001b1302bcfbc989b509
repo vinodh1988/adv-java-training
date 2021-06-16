@@ -1,9 +1,0 @@
-package com.first;
-
-public class Resource {
-  private final static String connection =  "Connection";
-  
-  public static String getConnection() {
-	  return connection;
-  }
-}
