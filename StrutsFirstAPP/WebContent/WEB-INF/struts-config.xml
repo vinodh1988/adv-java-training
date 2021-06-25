@@ -1,0 +1,16 @@
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+          
+<struts-config>
+<form-beans>
+   <form-bean name="firstForm" type="com.forms.FirstForm"></form-bean>
+</form-beans>
+
+<action-mappings>
+    <action name="firstForm" path="/first" type="com.actions.HelloAction">
+        <forward name="success" path="/home.jsp"></forward>
+    </action>
+</action-mappings>
+ 
+</struts-config>
