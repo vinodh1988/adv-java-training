@@ -12,8 +12,9 @@
     <action name="firstForm" path="/first" type="com.actions.HelloAction">
         <forward name="success" path="/home.jsp"></forward>
     </action>
-    <action name="personForm" path="/simpleform" type="com.actions.DataAction">
+    <action name="personForm" parameter="method" path="/simpleform" scope="request" type="com.actions.DataAction">
        <forward name="success" path="/myform.jsp"></forward>
+       <forward name="result" path="/result.jsp"></forward>
     </action>
 </action-mappings>
  
