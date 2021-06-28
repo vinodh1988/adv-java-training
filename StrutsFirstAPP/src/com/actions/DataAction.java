@@ -34,9 +34,17 @@ public class DataAction extends DispatchAction{
        System.out.println("Store got invoked");
 		// TODO Auto-generated method stub
         PersonForm person=(PersonForm)form;
-        request.setAttribute("sno", person.getSno());
-        request.setAttribute("name", person.getCity());
-        request.setAttribute("city", person.getName());
-		return mapping.findForward("result");
+        Person p=new Person(person.getSno(),person.getName(),person.getCity());
+        if(PersonDAO.addPerson(p)) {
+        List<Person> list=PersonDAO.getPerson();
+        request.setAttribute("people", list);
+        person.setCity(null);
+        person.setName(null);
+        person.setSno(null);
+		return mapping.findForward("success");
+        }
+        else {
+        	return mapping.findForward("error");
+        }
 	}
 }

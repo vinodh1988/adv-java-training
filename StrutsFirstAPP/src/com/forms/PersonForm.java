@@ -3,15 +3,15 @@ package com.forms;
 import org.apache.struts.action.ActionForm;
 
 public class PersonForm extends ActionForm{
-  private int sno;
+  private Integer sno;
   private String name;
   private String city;
   
 
-public int getSno() {
+public Integer getSno() {
 	return sno;
 }
-public void setSno(int sno) {
+public void setSno(Integer sno) {
 	this.sno = sno;
 }
 public String getName() {

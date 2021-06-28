@@ -3,6 +3,7 @@ package com.repos;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
 import com.entity.Person;
@@ -13,5 +14,18 @@ public class PersonDAO {
     	  Query q =em.createQuery("Select p from Person p");  //JPQL
 		  List<Person> l=q.getResultList();
 		  return l;
+     }
+     
+     public static boolean addPerson(Person p) {
+    	 EntityTransaction t= em.getTransaction();
+    	 try {
+    	 t.begin();
+    	 em.persist(p);
+    	 t.commit();
+    	 return true;
+    	 }
+    	 catch(Exception e) {
+    		 return false;
+    	 }
      }
 }
