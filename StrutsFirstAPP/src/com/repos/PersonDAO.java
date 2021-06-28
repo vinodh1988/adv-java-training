@@ -28,4 +28,18 @@ public class PersonDAO {
     		 return false;
     	 }
      }
+     
+     public static boolean remove(int id) {
+    	 EntityTransaction t= em.getTransaction();
+    	 try {
+    	 t.begin();
+    	 Person p=em.find(Person.class, id);
+    	 em.remove(p);
+    	 t.commit();
+    	 return true;
+    	 }
+    	 catch(Exception e) {
+    		 return false;
+    	 }
+     }
 }

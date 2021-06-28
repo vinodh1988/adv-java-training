@@ -47,4 +47,21 @@ public class DataAction extends DispatchAction{
         	return mapping.findForward("error");
         }
 	}
+	
+	public ActionForward delete(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		
+		try {
+			PersonDAO.remove(Integer.parseInt(request.getParameter("id")));
+			 List<Person> list=PersonDAO.getPerson();
+		        request.setAttribute("people", list);
+		       
+			return mapping.findForward("success");
+		}
+		catch(Exception e) {
+			return mapping.findForward("error");
+		}
+		
+	}
+	
 }
