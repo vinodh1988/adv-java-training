@@ -9,7 +9,8 @@
 	
 
 	  <class>com.entity.Person</class>
-	  
+	  <class>com.entity.Dept</class>
+	  <class>com.entity.Emp</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://DESKTOP-O63GFKG\SQLEXPRESS;databaseName=handson" />
