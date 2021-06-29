@@ -12,7 +12,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<script src="scripts/app.js"></script>
+
 </head>
 <body>
 <html:form action="/simpleform">
@@ -30,7 +30,8 @@
           <td><html:text property="city" /></td>
      </tr>
      <tr>
-      <td> <html:submit property="method" value="store"></html:submit> </td>
+      <td> <html:submit styleId="save" property="method" value="store"></html:submit> </td>
+      <td> <html:submit styleId="update" property="method" value="update"></html:submit> </td>
    </table>
    </html:form>
   <table class="table table-hover">
@@ -54,4 +55,5 @@
        </tbody>
   </table>
 </body>
+<script src="scripts/app.js"></script>
 </html>

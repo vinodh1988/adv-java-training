@@ -1,8 +1,10 @@
 /**
  * 
  */
-
+document.getElementById("update").disabled=true;
 function update(sno,name,city){
+	document.getElementById("update").disabled=false;
+	document.getElementById("save").disabled=true;
 	console.log(sno,name,city)
 	document.forms[0].sno.value=sno;
 	document.forms[0].name.value=name;

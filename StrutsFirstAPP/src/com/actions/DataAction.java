@@ -64,4 +64,25 @@ public class DataAction extends DispatchAction{
 		
 	}
 	
+	public ActionForward update(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		
+		try {
+		    PersonForm person=(PersonForm)form;
+	        Person p=new Person(person.getSno(),person.getName(),person.getCity());
+	        PersonDAO.update(p);
+	        person.setCity(null);
+	        person.setName(null);
+	        person.setSno(null);
+			 List<Person> list=PersonDAO.getPerson();
+		        request.setAttribute("people", list);
+		       
+			return mapping.findForward("success");
+		}
+		catch(Exception e) {
+			return mapping.findForward("error");
+		}
+		
+	}
+	
 }

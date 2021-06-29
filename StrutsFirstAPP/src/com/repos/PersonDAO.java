@@ -29,17 +29,29 @@ public class PersonDAO {
     	 }
      }
      
-     public static boolean remove(int id) {
+     public static void remove(int id) {
     	 EntityTransaction t= em.getTransaction();
     	 try {
     	 t.begin();
     	 Person p=em.find(Person.class, id);
     	 em.remove(p);
     	 t.commit();
-    	 return true;
+    	 
     	 }
     	 catch(Exception e) {
-    		 return false;
+    		 throw e;
+    	 }
+     }
+     
+     public static void update(Person p) {
+    	 EntityTransaction t= em.getTransaction();
+    	 try {
+    	 t.begin();
+    	 em.merge(p);
+    	 t.commit();
+    	 }
+    	 catch(Exception e) {
+    		 throw e;
     	 }
      }
 }
