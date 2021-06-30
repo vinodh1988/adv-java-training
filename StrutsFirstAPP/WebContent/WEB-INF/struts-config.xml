@@ -6,6 +6,8 @@
 <form-beans>
    <form-bean name="firstForm" type="com.forms.FirstForm"></form-bean>
    <form-bean name="personForm" type="com.forms.PersonForm"></form-bean>
+   <form-bean name="empForm" type="com.forms.EmpForm"></form-bean>
+   <form-bean name="deptForm" type="com.forms.DeptForm"></form-bean>
 </form-beans>
 
 <action-mappings>
@@ -17,8 +19,12 @@
        <forward name="error" path="/error.jsp"></forward>
        <forward name="result" path="/result.jsp"></forward>
     </action>
-     <action  path="/org" type="com.actions.DeptAction">
+     <action name="empForm" path="/org" scope="request" type="com.actions.DeptAction">
        <forward name="success" path="/org.jsp"></forward>
+       <forward name="error" path="/error.jsp"></forward>
+    </action>
+      <action name="empForm" path="/saveit" scope="request" type="com.actions.EmpAction">
+       <forward name="success" path="/home.jsp"></forward>
        <forward name="error" path="/error.jsp"></forward>
     </action>
 </action-mappings>

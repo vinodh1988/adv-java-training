@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
 <!doctype html>
 <html>
 <head>
@@ -22,6 +23,32 @@
 </head>
 <body>
  
+<html:form action="/saveit">
+   <table>
+      <tr>
+          <th>Empno</th>
+          <td><html:text property="empno" /></td>
+     </tr>
+     <tr>
+          <th>Name</th>
+          <td><html:text property="name" /></td>
+     </tr>
+      <tr>
+          <th>Department</th>
+          <td><html:select property="deptno">
+                 <html:option value="-1">Select Department</html:option>
+                 <html:optionsCollection name="empForm" property="departments" label="name" value="departmentno"/>
+              </html:select>
+          </td>
+     </tr>
+     <tr>
+          <th>City</th>
+          <td><html:text property="city" /></td>
+     </tr>
+     <tr>
+      <td> <html:submit styleId="save" value="store"></html:submit> </td>
+     </table>
+   </html:form>
 <div id="accordion">
  <c:forEach items="${depts}" var="x">
   <h3>${x.name}</h3>

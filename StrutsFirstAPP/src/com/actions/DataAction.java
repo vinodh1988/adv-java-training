@@ -24,7 +24,7 @@ public class DataAction extends DispatchAction{
 
 		 List<Person> list=PersonDAO.getPerson();
 		 request.setAttribute("people", list);
-       return mapping.findForward("success");
+         return mapping.findForward("success");
 	}
   
 	

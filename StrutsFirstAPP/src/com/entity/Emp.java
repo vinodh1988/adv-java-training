@@ -17,8 +17,9 @@ public class Emp {
   private String name;
 @Column
   private String city;
-@Column
-  private String departmentno;
+
+
+
 
 @ManyToOne(cascade = CascadeType.ALL)
 @JoinColumn(name = "departmentno")
@@ -34,12 +35,12 @@ public void setDept(Dept dept) {
 
 public Emp() {}
 
-public Emp(Integer empno, String name, String city, String departmentno) {
+public Emp(Integer empno, String name, String city,Integer departmentno) {
 	super();
 	this.empno = empno;
 	this.name = name;
 	this.city = city;
-	this.departmentno = departmentno;
+
 }
 public Integer getEmpno() {
 	return empno;
@@ -59,12 +60,8 @@ public String getCity() {
 public void setCity(String city) {
 	this.city = city;
 }
-public String getDepartmentno() {
-	return departmentno;
-}
-public void setDepartmentno(String departmentno) {
-	this.departmentno = departmentno;
-}
+
+
 
 
 }
