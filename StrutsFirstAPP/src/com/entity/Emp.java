@@ -57,6 +57,11 @@ public void setName(String name) {
 public String getCity() {
 	return city;
 }
+@Override
+public String toString() {
+	return "Emp [empno=" + empno + ", name=" + name + ", city=" + city +"]";
+}
+
 public void setCity(String city) {
 	this.city = city;
 }

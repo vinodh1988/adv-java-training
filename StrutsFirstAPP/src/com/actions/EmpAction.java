@@ -27,9 +27,7 @@ public class EmpAction extends Action {
 	
 		
 		if(OrganizationDAO.addEmp(e,emp.getDeptno())) {
-			e.setEmpno(0);
-			e.setName(null);
-			e.setCity(null);
+		
 			return mapping.findForward("success");
 		}
 			return  mapping.findForward("error");

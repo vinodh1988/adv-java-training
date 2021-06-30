@@ -43,6 +43,10 @@ public Set<Emp> getEmployees() {
 public void setEmployees(Set<Emp> employees) {
 	this.employees = employees;
 }
+@Override
+public String toString() {
+	return "Dept [departmentno=" + departmentno + ", name=" + name + ", employees=" + employees + "]";
+}
   
   
 }
